@@ -1,4 +1,4 @@
-#include "..\include\TextGen.h"
+#include "../include/textgen.h"
 
 TextGen::TextGen(string text, int nref)
 {

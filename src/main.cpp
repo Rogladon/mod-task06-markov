@@ -1,4 +1,4 @@
-#include "../include/TextGen.h"
+#include "../include/textgen.h"
 #include <string>
 #include <deque>
 #include <vector>

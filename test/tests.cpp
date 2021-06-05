@@ -21,20 +21,6 @@ TEST(task1, test2)
 	strcpy(ch, result.c_str());
 	ASSERT_STREQ("123 567 234 ", ch);
 }
-TEST(task1, test3)
-{
-	map<deque<string>, vector<string> > str;
-	str[{"123", "567"}].push_back("234");
-	str[{"123", "567"}].push_back("000");
-	str[{"123", "567"}].push_back("888");
-	TextGen gn = TextGen(str, { "123","567","234", "000", "888" }, 2);
-	string result = gn.GetText(1000);
-	bool res = false;
-  if (result == "123 567 234 " || result == "123 567 000 " || result == "123 567 888 ") {
-		res = true;
-  }
-	ASSERT_STREQ(true, res);
-}
 TEST(task1, test4)
 {
 	map<deque<string>, vector<string> > str;

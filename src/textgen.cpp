@@ -13,6 +13,8 @@ TextGen::TextGen(string text, int nref)
 			word = "";
 		}
 	}
+	if (word != "")
+		words.push_back(word);
 	this->words = words;
 
 	for(int i = 0; i< words.size(); i++) {

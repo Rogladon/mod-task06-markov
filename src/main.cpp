@@ -20,7 +20,7 @@ int main() {
         }
     }
     in.close();
-    TextGen t = TextGen(text, 2);
-    cout << t.GetText(1000) << endl;
+    TextGen gn = TextGen(text, 2);
+    cout << gn.GetText(10) << endl;
 	return 0;
 }

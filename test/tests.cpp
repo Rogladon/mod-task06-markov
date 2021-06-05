@@ -29,15 +29,21 @@ TEST(task1, test3)
 	str[{"123", "567"}].push_back("888");
 	TextGen gn = TextGen(str, { "123","567","234", "000", "888" }, 2);
 	string result = gn.GetText(1000);
-	char* ch = new char[result.size() + 1];
-	strcpy(ch, result.c_str());
-	ASSERT_STREQ("123 567 234 ", ch);
+	bool res = false;
+  if (result == "123 567 234 " || result == "123 567 000 " || result == "123 567 888 ") {
+		res = true;
+  }
+	ASSERT_STREQ(true, res);
 }
 TEST(task1, test4)
 {
-	TextGen gn = TextGen("aa bb cc dd aa bb", 2);
-	string result = gn.GetText(20);
+	map<deque<string>, vector<string> > str;
+	str[{"123", "567"}].push_back("234");
+	str[{"567", "234"}].push_back("000");
+	str[{"234", "000"}].push_back("888");
+	TextGen gn = TextGen(str, { "123","567","234", "000", "888" }, 2);
+	string result = gn.GetText(10);
 	char* ch = new char[result.size() + 1];
 	strcpy(ch, result.c_str());
-	ASSERT_STREQ("aa bb cc dd aa bb cc ", ch);
+	ASSERT_STREQ("123 567 234 000 ", ch);
 }

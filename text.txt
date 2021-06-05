@@ -1,0 +1,5 @@
+You may have noticed that Vue components are very similar to Custom Elements which are part of the Web Components Spec (opens new window) That's because Vue's component syntax is loosely modeled after the spec For example Vue components implement the Slot API (opens new window)and the is special attribute However there are a few key differences:
+
+The Web Components Spec has been finalized but is not natively implemented in every browser Safari  Chrome  and Firefox  natively support web components In comparison Vue components work consistently in all supported browsers (except Internet Explorer   please check details here (opens new window)) When needed Vue components can also be wrapped inside a native custom element
+Vue components provide important features that are not available in plain custom elements most notably crosscomponent data flow custom event communication and build tool integrations
+Although Vue doesn't use custom elements internally it has great interoperability (opens new window)when it comes to consuming or distributing as custom elements Vue CLI also supports building Vue components that register themselves as native custom elements
